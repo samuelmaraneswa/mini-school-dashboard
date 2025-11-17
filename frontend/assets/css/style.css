@@ -45,6 +45,11 @@ th{
   background-color: #f0f0f0;
 }
 
+.loading-row {
+  text-align: center;
+  color: #666;
+}
+
 @media (max-width: 1024px) {
   th, td {
     padding: 10px;
