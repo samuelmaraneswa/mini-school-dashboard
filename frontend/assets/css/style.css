@@ -3,15 +3,88 @@ body{
   padding: 20px;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+  display: none;
+}
+
+.table-wrapper:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
 table{
   border-collapse: collapse;
-  width: 60%;
+  width: 100%;
+  min-width: 100px;  
+  display: block;
 }
 
 th,td{
-  border: 1px solid #ccc; padding: 8px; text-align: left;
+  border: 1px solid #ccc; 
+  padding: 10px 15px; 
+  text-align: left;
+  white-space: nowrap;   
 }
 
 th{
   background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  th, td {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .scroll-hint {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .scroll-hint {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+  }
 }
